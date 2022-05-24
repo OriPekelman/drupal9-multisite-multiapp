@@ -1,5 +1,0 @@
-extensions:
-    - redis
-    - sodium
-    - apcu
-    - blackfire

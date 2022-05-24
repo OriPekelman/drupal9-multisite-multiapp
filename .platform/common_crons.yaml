@@ -1,4 +1,0 @@
-# Run Drupal's cron tasks every 19 minutes.
-drupal:
-    spec: '*/19 * * * *'
-    cmd: 'cd web ; drush core-cron'
