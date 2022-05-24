@@ -27,7 +27,7 @@
             drush -y config-import
     dependencies:
         php:
-        composer/composer: '^2'
+          composer/composer: '^2'
     crons:
         # Run Drupal's cron tasks every 19 minutes.
         drupal:
