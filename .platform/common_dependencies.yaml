@@ -1,0 +1,2 @@
+php:
+    composer/composer: '^2'

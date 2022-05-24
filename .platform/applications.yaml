@@ -1,0 +1,42 @@
+-   name: 'drupal'
+    type: 'php:8.0'
+    build:
+        flavor: composer
+    relationships:
+        rediscache: 'cache:redis'
+        main: 'db:main'
+    disk: 1024
+    runtime: !include "common_runtime.yaml"
+    mounts: !include "common_mounts.yaml"
+    hooks: !include "common_hooks.yaml"
+    web: !include "common_web.yaml"
+    dependencies: !include "common_dependencies.yaml"
+    crons: !include "common_crons.yaml"
+-   name: 'drupal-first'
+    type: 'php:8.0'
+    build:
+        flavor: composer
+    relationships:
+        rediscache: 'cache:redis'
+        main: 'db:first'
+    disk: 1024
+    runtime: !include "common_runtime.yaml"
+    mounts: !include "common_mounts.yaml"
+    hooks: !include "common_hooks.yaml"
+    web: !include "common_web.yaml"
+    dependencies: !include "common_dependencies.yaml"
+    crons: !include "common_crons.yaml"
+-   name: 'drupal-second'
+    type: 'php:8.0'
+    build:
+        flavor: composer
+    relationships:
+        rediscache: 'cache:redis'
+        main: 'db:second'
+    disk: 1024
+    runtime: !include "common_runtime.yaml"
+    mounts: !include "common_mounts.yaml"
+    hooks: !include "common_hooks.yaml"
+    web: !include "common_web.yaml"
+    dependencies: !include "common_dependencies.yaml"
+    crons: !include "common_crons.yaml"

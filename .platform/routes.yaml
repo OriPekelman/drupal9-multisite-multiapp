@@ -5,7 +5,7 @@
 
 "https://first.{default}/":
     type: upstream
-    upstream: "drupal:http"
+    upstream: "drupal-first:http"
     cache:
         enabled: true
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.
@@ -13,7 +13,7 @@
 
 "https://second.{default}/":
     type: upstream
-    upstream: "drupal:http"
+    upstream: "drupal-second:http"
     cache:
         enabled: true
         # Base the cache on the session cookie and custom Drupal cookies. Ignore all other cookies.

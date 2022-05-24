@@ -1,0 +1,29 @@
+# For multisite, use a common shared files directory and subdirectories inside it
+# to avoid needing a separate mount definition for each site.
+'/web/files':
+    source: local
+    source_path: 'files'
+# Drupal gets its own dedicated tmp directory. The settings.platformsh.php
+# file will automatically configure Drupal to use this directory.
+'/tmp':
+    source: local
+    source_path: 'tmp'
+# Private file uploads are stored outside the web root. The settings.platformsh.php
+# file will automatically configure Drupal to use this directory.
+'/private':
+    source: local
+    source_path: 'private'
+# Drush needs a scratch space for its own caches.
+'/.drush':
+    source: local
+    source_path: 'drush'
+# Drush will try to save backups to this directory, so it must be
+# writeable even though you will almost never need to use it.
+'/drush-backups':
+    source: local
+    source_path: 'drush-backups'
+# Drupal Console will try to save backups to this directory, so it must be
+# writeable even though you will almost never need to use it.
+'/.console':
+    source: local
+    source_path: 'console'
